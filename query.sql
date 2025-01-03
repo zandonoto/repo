@@ -3,8 +3,6 @@ SET NOCOUNT ON
 DROP TABLE IF EXISTS #List
 DROP TABLE IF EXISTS #Temp
 
-DECLARE @temp CohortDatatype;
-
 -- Lista de contratos ativos de Nibo Emissor de Notas Fiscal
 WITH ContractsList AS (
     SELECT  
