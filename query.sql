@@ -5,7 +5,7 @@ DRO TABLE IF EXISTS #Temp
 
 
 -- Lista de contratos ativos de Nibo Emissor de Notas Fiscal
-WITH ContractsList AS (
+WITH ContractsList AS 
     SELECT  
           [ReportDate]
         , [ConsumptionStartDate]
