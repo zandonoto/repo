@@ -101,10 +101,6 @@ SELECT
         AND [HUB].[Pipeline] = 'Sucesso'
         AND [C].[ReferenceMonth] IS NOT NULL
         AND [HUB].[Stage] != 'Churn'
-        --AND [HUB].[ReferenceId] = '81a20bb9-0607-4180-9207-20b2cb776506' -- Licença inválida
-        --AND [HUB].[ReferenceId] = 'ed141cb0-fac6-4638-a7da-859726183c23' -- Licença inválida
-        --AND [HUB].[ReferenceId] = '7fe0370f-fdb9-4d5d-a011-13c6b4587716' -- Licença inválida
-        --AND [HUB].[ReferenceId] = 'aa07a156-2a78-42c0-8799-4f92221cc053' -- Possui licença ativa, mas ainda não gerou consumo
     
     GROUP BY 
           [HUB].[ReferenceId]
