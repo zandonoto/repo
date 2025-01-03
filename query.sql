@@ -28,9 +28,7 @@ WITH ContractsList AS (
             AND (
                 [ClosedMonth] = 1
                 OR ([ReportDate] >= DATEADD(DAY, 1, EOMONTH(GETDATE()-30)))
-            )
-
-),
+            ),
 
 -- Data de contratação do cliente
 FirstContractDate AS (
