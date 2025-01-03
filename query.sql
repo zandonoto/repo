@@ -1,7 +1,8 @@
 SET NOCOUNT ON
 
 DROP TABLE IF EXISTS #List
-DROP TABLE IF EXISTS #Temp
+DRO TABLE IF EXISTS #Temp
+
 
 -- Lista de contratos ativos de Nibo Emissor de Notas Fiscal
 WITH ContractsList AS (
