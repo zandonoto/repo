@@ -1,17 +1,16 @@
 SET NOCOUNT ON
 
 DROP TABLE IF EXISTS #List
-DROP TABLE IF EXISTS #Temp
+DRO TABLE IF EXISTS #Temp
 
-DECLARE @temp CohortDatatype;
 
 -- Lista de contratos ativos de Nibo Emissor de Notas Fiscal
-WITH ContractsList AS (
+WITH ContractsList AS 
     SELECT  
           [ReportDate]
         , [ConsumptionStartDate]
-        , [ConsumptionEndDate]
-        , [ReferenceMonth]                                    
+         [ConsumptionEndDate]
+         [ReferenceMonth]                                    
         , [AccountantId]
         , [AccountantName]
         , [FeatureId]
@@ -32,7 +31,7 @@ WITH ContractsList AS (
 
 -- Data de contratação do cliente
 FirstContractDate AS (
-    SELECT       
+           
           [FirstDate].[ReportDate] [FirstReportDate]
         , [FirstDate].[AccountantId] [FirstAccountantId]
         , [FirstDate].[ReferenceMonth] [FirstReferenceMonth]
