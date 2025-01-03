@@ -1,0 +1,31 @@
+name: Validate SQL Syntax
+
+on:
+  push:
+    paths:
+      - '**/*.sql'
+  pull_request:
+    paths:
+      - '**/*.sql'
+
+jobs:
+  sql-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16' # Specify a Node.js version compatible with sql-lint
+
+      - name: Install sql-lint
+        run: npm install -g sql-lint
+
+      - name: Validate SQL files
+        run: |
+          for file in $(find . -name "*.sql"); do
+            echo "Validating $file"
+            sql-lint $file || exit 1
+          done
