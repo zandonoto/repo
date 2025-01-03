@@ -8,8 +8,8 @@ WITH ContractsList AS (
     SELECT  
           [ReportDate]
         , [ConsumptionStartDate]
-        , [ConsumptionEndDate]
-        , [ReferenceMonth]                                    
+         [ConsumptionEndDate]
+         [ReferenceMonth]                                    
         , [AccountantId]
         , [AccountantName]
         , [FeatureId]
@@ -30,7 +30,7 @@ WITH ContractsList AS (
 
 -- Data de contratação do cliente
 FirstContractDate AS (
-    SELECT       
+           
           [FirstDate].[ReportDate] [FirstReportDate]
         , [FirstDate].[AccountantId] [FirstAccountantId]
         , [FirstDate].[ReferenceMonth] [FirstReferenceMonth]
