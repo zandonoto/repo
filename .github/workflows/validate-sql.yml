@@ -1,9 +1,6 @@
 name: Validate SQL Syntax
 
 on:
-  push:
-    paths:
-      - '**/*.sql'
   pull_request:
     paths:
       - '**/*.sql'
@@ -25,7 +22,4 @@ jobs:
 
       - name: Validate SQL files
         run: |
-          for file in $(find . -name "*.sql"); do
-            echo "Validating $file"
-            sql-lint $file || exit 1
-          done
+         sql-lint .
