@@ -81,3 +81,68 @@
 #     whybitorgay += '?'
 #     print(whybitorgay)
     
+#lecture 4
+# me = 10
+# for me in range(0, 11):
+#     while me / 2 == int(me / 2):
+#         print(me)
+#         me = me - 1 
+
+# an_letters = "aefhilmnorsxAEFHILMNORSX"
+# word = input("I will cheer for you! Enter a word: ")
+# times = int(input("Enthusiasm level (1-10): "))
+
+# for w in word:
+#     if w in an_letters:
+#         print("Give me an " + w + "! " + w)
+#     else:
+#         print("Give me a " + w + "! " + w)
+# print("What does that spell?")
+# for i in range(times):
+#     print(word, "!!!")
+  
+# unique_letters = input("What is the word? ")
+# seen = ""
+
+# for char in unique_letters:
+#     if char not in seen:
+#         seen = seen + char
+   
+# print(len(seen))
+
+# found = False
+# secret = 100
+
+# for i in range(1, 11):
+#     # i = 1, 2, 3, 4... 11
+#     if i == secret:
+#         print("You got it!")
+#         found = True
+# if not found:
+#     print("nope")     
+
+# Binary representation of a number
+# num = 1000
+# result = ''
+# if num == 0:
+#     result = '0'
+# while num > 0:
+#     result = str(num%2) + result
+#     num = num//2
+# print(result)
+
+# num = -1000
+# if num < 0:
+#     is_neg = True
+#     num = abs(num)
+# else:
+#     is_neg = False
+# result = ''
+# if num == 0:
+#     result = '0'
+# while num > 0:
+#     result = str(num%2) + result
+# num = num//2
+# if is_neg:
+#     result = '-' + result
+#     print(result)
